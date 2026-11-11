@@ -12,8 +12,8 @@ exports.getAllUsers = (req, res) => {
 
 //POST
 exports.createUser=(req,res)=>{
-    const {studId, name, course, units, amount}=req.body;  
-    connection.query('INSERT INTO enrollment_bills (student_id, student_name, course_program, units_enrolled, tuition_total) VALUES (?,?,?,?,?)',[studId, name, course, units, amount],(err,result)=>{
+    const {student_id, student_name, course_program, units_enrolled, tuition_total}=req.body;  
+    connection.query('INSERT INTO enrollment_bills (student_id, student_name, course_program, units_enrolled, tuition_total) VALUES (?,?,?,?,?)',[student_id, student_name, course_program, units_enrolled, tuition_total],(err,result)=>{
         if(err) throw err;
         res.json({message:'Enrollment assessment created successfully',id:result.insertId});
     });
