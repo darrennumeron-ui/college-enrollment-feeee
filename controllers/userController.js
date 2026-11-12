@@ -2,12 +2,12 @@
 const connection = require('../config/db');
 
 //GET
-exports.getAllUsers = (req, res) => {
-    connection.query('SELECT * FROM enrollment_bills', (err, rows, fields) => {
-        if (err) throw err;
-        res.json(rows);
-    });
-};
+//exports.getAllUsers = (req, res) => {
+    //connection.query('SELECT * FROM enrollment_bills', (err, rows, fields) => {
+        //if (err) throw err;
+        //res.json(rows);
+   // });
+//};
 
 
 //POST
